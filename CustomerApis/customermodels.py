@@ -7,7 +7,6 @@ from flask import jsonify
 # def home(id):
 #     con=mysql.connection.cursor()
 #     print("id",id)
-
 #     sql=("SELECT * FROM users where  id = %s")
 #     # try:
 #     con.execute(sql,id)
