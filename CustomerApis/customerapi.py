@@ -4,7 +4,7 @@ from customerresources import Employess
 
 app = Flask(__name__)
 
-app.run(host='192.168.184.101',debug=True)
+# app.run(host='192.168.184.101',debug=True)
 
 app.config.from_pyfile('customerdbconfigure.py')
 

@@ -23,11 +23,12 @@ from flask import jsonify
 def allEmployees():
     con= mysql.connection.cursor()
     # con.execute("SELECT * FROM users")
+
     con.callproc('crud.getUsers')
     res = con.fetchall()
-    d = list(res)
+    # d = list(res)
     con.close()
-    return jsonify(d) 
+    return jsonify(res[0]) 
 
 
 
