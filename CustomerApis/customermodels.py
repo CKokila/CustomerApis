@@ -28,7 +28,11 @@ def allEmployees():
     res = con.fetchall()
     # d = list(res)
     con.close()
-    return jsonify(res[0]) 
+    return jsonify({
+        "status":200,
+        "data":res,
+         "message":"Data read successfully"
+        }) 
 
 
 

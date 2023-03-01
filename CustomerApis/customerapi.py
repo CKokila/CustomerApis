@@ -2,32 +2,32 @@ from flask import Flask
 from flask_restful import Api
 from customerresources import Employess
 
-
 app = Flask(__name__)
-
+# app.run(debug=True ,host='10.79.21.41')
 
 app.config.from_pyfile('customerdbconfigure.py')
+
 
 api = Api(app)
 
 api.add_resource(Employess,'/customer/all')
 
-
-# def socketFind():
-#     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#     s.connect(('10.0.0.0', 0)) 
-#     print("Socket",s.getsockname()[0])
-
-# def get_Host_name_IP():
-#     try:
-#         host_name = socket.gethostname()
-#         host_ip = socket.gethostbyname(host_name)
-#         print("Hostname :  ", host_name)
-#         print("IP : ", host_ip)
-#     except:
-#         print("Unable to get Hostname and IP")
-
-# get_Host_name_IP()
+# def get_ip():
+#         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#         s.settimeout(0)
+#         try:
+#             # doesn't even have to be reachable
+#             hostname = socket.gethostname()
+#             ipAddress = socket.gethostbyname(hostname)
+#             print("Hostname ",ipAddress)
+#             s.connect((ipAddress, 1))
+#             print("SocketName ",s.getsockname()[0])
+#             IP = s.getsockname()[0]
+#         except Exception:
+#             IP = '127.0.0.1'
+#         finally:
+#             s.close()
+#         return IP
 
 if __name__ == '__main__':
     app.run(debug=True)
