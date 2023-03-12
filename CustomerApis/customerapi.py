@@ -1,15 +1,14 @@
 from flask import Flask
 from flask_restful import Api
 from customerresources import Employess
+
 # from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
-# app.run(debug=True ,host='10.79.21.41')
-
-
+app.debug = True
+app.run(host='0.0.0.0',port=5000)
 
 app.config.from_pyfile('customerdbconfigure.py')
-
 
 api = Api(app)
 
