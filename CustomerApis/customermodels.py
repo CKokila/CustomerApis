@@ -20,6 +20,7 @@ from flask import jsonify
     # except:
     #     return "Id not found"
 
+
 def allEmployees():
     con= mysql.connection.cursor()
     con.execute("SELECT * FROM users")
@@ -34,8 +35,16 @@ def allEmployees():
          "message":"Data read successfully"
         }) 
 
-
-
+def getAllProducts():
+    con= mysql.connection.cursor()
+    con.execute("SELECT * FROM products")
+    res = con.fetchall()
+    con.close()
+    return jsonify({
+        "status":200,
+        "data":res,
+         "message":"Data read successfully"
+        }) 
 
 
 
