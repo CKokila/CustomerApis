@@ -2,8 +2,6 @@ from flask import Flask
 from flask_restful import Api
 from customerresources import Employess,Products
 
-# from gevent.pywsgi import WSGIServer
-
 app = Flask(__name__)
 
 
