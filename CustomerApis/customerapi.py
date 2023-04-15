@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from customerresources import Employess,Products
+from customerresources import Employess,Products,ProductById,Home
 
 app = Flask(__name__)
 
@@ -11,6 +11,9 @@ api = Api(app)
 
 api.add_resource(Employess,'/customer/all')
 api.add_resource(Products,"/products")
+api.add_resource(ProductById,"/id")
+api.add_resource(Home,"/id/")
+
 
 
 if __name__ == '__main__':
