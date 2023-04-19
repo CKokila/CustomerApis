@@ -11,8 +11,8 @@ api = Api(app)
 
 api.add_resource(Employess,'/customer/all')
 api.add_resource(Products,"/products")
-api.add_resource(ProductById,"/id")
-api.add_resource(Home,"/id/")
+api.add_resource(ProductById,"/products/",'/products/<id>')
+# api.add_resource(Home,"/id/",'/id/<id>')
 
 
 

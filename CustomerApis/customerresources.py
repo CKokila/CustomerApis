@@ -8,8 +8,8 @@ class Employess(Resource):
         return employees
     
 class Home(Resource):
-    def get(self):
-        productid = home(self)
+    def get(self,id):
+        productid = home(id)
         return productid    
 
 class Products(Resource):
@@ -19,6 +19,6 @@ class Products(Resource):
     
 
 class ProductById(Resource):
-    def get(self):
-        productID = getProductById()
+    def get(self,id):
+        productID = getProductById(id)
         return productID
